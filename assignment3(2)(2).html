@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add numbers</title>
+</head>
+<body>
+    <h2> Read values from user</h2>
+    <label>Enter the first number</label>
+        <input type="number" id="input1" >
+    <br><br>
+    <label>Enter the Second number</label>
+    <input type="number" id="input2" ></label>
+    <br><br>
+    <button onclick="addVal()">RESULTS</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <script>
+        function addValues(){
+            let n1= parseFloat(document.getElementById("input1").value);
+            let n2= parseFloat(document.getElementById("input2").value);
+            let sum=n1+n2;
+            let sub=n1-n2;
+            let mult=n2*n1;
+            let div=n1/n2;
+            document.getElementById("result1").textContent="sum="+ sum;
+            document.getElementById("result2").textContent="difference="+ sub;  
+            document.getElementById("result3").textContent="product="+ mult;  
+            document.getElementById("result4").textContent="quotient="+ div;         
+        }
+    </script>    
+</body>
+</html>
