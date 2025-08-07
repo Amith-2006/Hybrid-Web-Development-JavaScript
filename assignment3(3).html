@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grade Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>College Code</h1>
+  <label for="marks">Enter code:</label>
+  <input type="number" id="code" min="1" max="5" />
+  <button onclick="getOutput()">FIND COLLEGE</button>
+
+  <div id="result"></div>
+
+  <script>
+    function getOutput() {
+      const code = Number(document.getElementById('code').value);
+      let clg = '';
+      if (code < 1|| code > 5 || isNaN(code)) {
+        clg = 'Please enter a valid code between 1 and 5.';
+      } else if (code == 1) {
+        clg = 'NIT-K';
+      } else if (code == 2) {
+        clg = 'RVCE';
+      } else if (code == 3) {
+        clg = 'MSRIT';
+      } else if (code == 4) {
+        clg = 'BMSCE';
+      } else if (code == 5) {
+        clg = 'PES';
+      } else {
+        clg = 'Not found';
+      }
+      document.getElementById('result').textContent = 'College: ' + clg;
+    }
+  </script>
+</body>
+</html>
